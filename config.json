@@ -1,6 +1,6 @@
 {
-    "baseUrl":"http://youverify-status.local/api/v1/",
-    "token": "Vt40aQ9EXCgTA6DaCbrv",
+    "baseUrl":"https://status.youverify.co/api/v1/",
+    "token": "7B718WzxyW4pYbcSzwzy",
     "timezone": "Africa/Lagos",
     "components": [
         {
@@ -11,28 +11,7 @@
             "checkInterval": 80000
         },
         {
-            "componentId":5,
-            "componentUrl":"https://api.staging.youverify.co/v1/nin/51113970892/status",
-            "componentName": "NIN",
-            "requestType":"get",
-            "checkInterval": 80000
-        },
-        {
-            "componentId":6,
-            "componentUrl":"https://api.staging.youverify.co/v1/bvn/22204499673/status",
-            "componentName": "BVN",
-            "requestType":"get",
-            "checkInterval": 80000
-        },
-        {
-            "componentId":7,
-            "componentUrl":"https://api.staging.youverify.co/v1/frsc/GGE49723AA11/status?dob=1991-12-06",
-            "componentName": "FRSC",
-            "requestType":"get",
-            "checkInterval": 80000
-        },
-        {
-            "componentId":4,
+            "componentId":2,
             "componentUrl":"https://nimc.client.youverify.co/nimc",
             "componentName": "NIMC",
             "requestType":"post",
@@ -40,6 +19,27 @@
             "payload":{
                 "nin": "51113970892"
             }
+        },
+        {
+            "componentId":3,
+            "componentUrl":"https://api.staging.youverify.co/v1/nin/51113970892/status",
+            "componentName": "NIN",
+            "requestType":"get",
+            "checkInterval": 80000
+        },
+        {
+            "componentId":4,
+            "componentUrl":"https://api.staging.youverify.co/v1/bvn/22204499673/status",
+            "componentName": "BVN",
+            "requestType":"get",
+            "checkInterval": 80000
+        },
+        {
+            "componentId":5,
+            "componentUrl":"https://api.staging.youverify.co/v1/frsc/GGE49723AA11/status?dob=1991-12-06",
+            "componentName": "FRSC",
+            "requestType":"get",
+            "checkInterval": 80000
         }
     ]
 }

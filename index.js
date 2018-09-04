@@ -55,7 +55,6 @@ async function monitorNewComponent(component){
             'token': '4a355e28766e915675555ed488f6f407',
         }, timeout: 60000
     });
-
     
    
     /* ------------- Query the url or API and return it's current network status---------------- */
