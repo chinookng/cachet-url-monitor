@@ -24,4 +24,4 @@ Basic Setup
  
 
  ### cachetCredentials.js
- > __headers__: You can set headers for your connection here. The major ones have been set already.
+ > __headers__: You can set headers for your connection here. The major ones have already been set.
