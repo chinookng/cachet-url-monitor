@@ -58,7 +58,7 @@ async function monitorNewComponent(component){
             'Content-Type': 'application/json',
             'X-Requested-With': 'XMLHttpRequest',
             'token': components.accessToken,
-        }, timeout: 60000
+        }, timeout: 300000
     });
     
    

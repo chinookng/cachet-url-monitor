@@ -9,14 +9,14 @@
             "componentUrl":"https://youverify.co/",
             "componentName": "Youverify",
             "requestType":"get",
-            "checkInterval": 80000
+            "checkInterval": 7200000
         },
         {
             "componentId":2,
             "componentUrl":"https://nimc.client.youverify.co/nimc",
             "componentName": "NIMC",
             "requestType":"post",
-            "checkInterval": 80000,
+            "checkInterval": 7200000,
             "payload":{
                 "nin": "51113970892"
             }
@@ -26,21 +26,21 @@
             "componentUrl":"https://api.staging.youverify.co/v1/nin/51113970892/status",
             "componentName": "NIN",
             "requestType":"get",
-            "checkInterval": 80000
+            "checkInterval": 7200000
         },
         {
             "componentId":4,
             "componentUrl":"https://api.staging.youverify.co/v1/bvn/22204499673/status",
             "componentName": "BVN",
             "requestType":"get",
-            "checkInterval": 80000
+            "checkInterval": 7200000
         },
         {
             "componentId":5,
             "componentUrl":"https://api.staging.youverify.co/v1/frsc/GGE49723AA11/status?dob=1991-12-06",
             "componentName": "FRSC",
             "requestType":"get",
-            "checkInterval": 80000
+            "checkInterval": 7200000
         }
     ]
 }
