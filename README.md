@@ -25,3 +25,37 @@ Basic Setup
 
  ### cachetCredentials.js
  > __headers__: You can set headers for your connection here. The major ones have already been set.
+
+### Daemon Script
+
+```bash
+sudo nano /etc/systemd/system/status-url-monitor.service
+
+[Unit]
+Description=Status URL Monitor
+After=syslog.target
+After=network.target
+After=mysqld.service
+#After=postgresql.service
+#After=memcached.service
+#After=redis.service
+
+[Service]
+Type=simple
+User=root
+Group=root
+WorkingDirectory=/home
+ExecStart=/home/youverify/.nvm/versions/node/v10.5.0/bin/node /home/youverify/www/cachet-url-monitor/index.js
+Restart=always
+Environment=USER=root HOME=/home
+
+[Install]
+WantedBy=multi-user.target
+```
+
+> sudo systemctl start status-url-monitor
+
+> sudo systemctl enable status-url-monitor
+
+> sudo systemctl restart status-url-monitor
+
