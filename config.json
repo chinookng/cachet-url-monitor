@@ -1,6 +1,7 @@
 {
     "baseUrl":"https://status.youverify.co/api/v1/",
     "token": "7B718WzxyW4pYbcSzwzy",
+    "accessToken": "4a355e28766e915675555ed488f6f407",
     "timezone": "Africa/Lagos",
     "components": [
         {
