@@ -110,8 +110,8 @@ async function monitorNewComponent(component){
 
      const response = await client.get(`${cachetCredentials.baseUrl}components/${componentId}`);
      let queryCachet = response.data.data.status;
-          console.log(`${componentName} from cachet:${queryCachet}`);
-          console.log(`${componentName} from Network:${componentStatus}`);
+        //   console.log(`${componentName} from cachet:${queryCachet}`);
+        //   console.log(`${componentName} from Network:${componentStatus}`);
 
             if (componentStatus == queryCachet) return;
 
@@ -132,10 +132,10 @@ async function monitorNewComponent(component){
             try {
                 await client.post(`${cachetCredentials.baseUrl}incidents`, body);
                 // currentNumOfInstanceRunning--;
-                console.log('done');
+                // console.log('done');
 
             } catch (e) {
-                console.log(e);
+                // console.log(e);
             }
  };
 
@@ -155,7 +155,7 @@ for (const component of components.components) {
 
 // Handling rejection erros
     process.on('unhandledRejection', (e) => { 
-        console.error(e.message);
+        // console.error(e.message);
         process.exit(1);
     });
 
