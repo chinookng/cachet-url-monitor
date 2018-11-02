@@ -9,6 +9,8 @@ const cachetCredentials = require('./cachetCredentials');
 
 function validateComponent(component) {
     const {componentUrl, componentId, requestType, payload, componentName, checkInterval}  = component; 
+    console.log(`Validating components (${componentName})`);
+
     if (componentId && componentUrl && requestType && componentName && checkInterval){
         if(requestType.toLowerCase() == 'post' && !payload) {
         
@@ -21,7 +23,10 @@ function validateComponent(component) {
         else if(checkInterval <= 60000){
             console.log(`The Component with url: ${componentUrl} must have a setInterval greater than 45secs`);
             return false;
-        } else {return true;} 
+        } else {
+            console.log(`Components (${componentName}) validated`);
+            return true;
+        } 
     }    
     else{
         console.log(`your component parameters are incomplete, check to make sure these 
@@ -58,7 +63,8 @@ async function monitorNewComponent(component){
     
    
     /* ------------- Query the url or API and return it's current network status---------------- */
-            
+    console.log(`Status-check is now monitoring - (${componentName})`)
+
             if(requestType.toLowerCase() == 'get' || requestType.toLowerCase() == 'delete'){
                 try {
                     const res = await http.get(`${componentUrl}`); // 
@@ -81,7 +87,8 @@ async function monitorNewComponent(component){
                     statusText = (e.response && e.response.statusText) || "Server not responding";
                     // console.log(error);
                 }     
-            }            
+            }
+            
 
     /* ------------------ Assign Credentials Depending on network status ------------------ */
             // console.log(status);
