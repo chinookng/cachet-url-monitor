@@ -13,10 +13,10 @@
         },
         {
             "componentId":2,
-            "componentUrl":"https://nimc.client.youverify.co/nimc",
+            "componentUrl":"https://identity.nimc.youverify.co/nimc",
             "componentName": "NIMC",
             "requestType":"post",
-            "checkInterval": 7200000,
+            "checkInterval": 14400000,
             "payload":{
                 "nin": "51113970892"
             }
